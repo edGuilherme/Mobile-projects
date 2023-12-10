@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlacarActivity">
+
+
+    <Button
+        android:id="@+id/btSalvarPlacar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#605F5F"
+        android:onClick="saveGame"
+        android:text="Salvar Placar"
+        android:textColor="#F4EB9D"
+        android:textColorHighlight="#F4EB9D"
+        android:textColorHint="#F4EB9D"
+        android:textColorLink="#F4EB9D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btPenalti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#605F5F"
+        android:onClick="openPenalti"
+        android:text="Penaltis"
+        android:textColor="#F4EB9D"
+        android:textColorHighlight="#F4EB9D"
+        android:textColorHint="#F4EB9D"
+        android:textColorLink="#F4EB9D"
+        app:layout_constraintEnd_toEndOf="@+id/btSalvarPlacar"
+        app:layout_constraintStart_toStartOf="@+id/btSalvarPlacar"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <TextView
+        android:id="@+id/tvNomePartida2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:text="Partida"
+        android:textColor="#F4EB9D"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/tvCrono"
+        app:layout_constraintStart_toEndOf="@+id/time1"
+        app:layout_constraintTop_toBottomOf="@+id/time2"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <Button
+        android:id="@+id/btVerJogos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#605F5F"
+        android:onClick="voltarPlacar"
+        android:shadowColor="#FFFFFF"
+        android:text="Resultado Anterior"
+        android:textColor="#F4EB9D"
+        android:textColorHighlight="#F4EB9D"
+        android:textColorHint="#F4EB9D"
+        android:textColorLink="#F4EB9D"
+        app:iconTint="#EA1B1B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#FAFAFA" />
+
+    <Button
+        android:id="@+id/btPausa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="276dp"
+        android:backgroundTint="#605F5F"
+        android:onClick="btPausa"
+        android:shadowColor="#FFFFFF"
+        android:text="Pausar/Retomar"
+        android:textColor="#F4EB9D"
+        android:textColorHighlight="#F4EB9D"
+        android:textColorHint="#F4EB9D"
+        android:textColorLink="#F4EB9D"
+        app:iconTint="#EA1B1B"
+        app:layout_constraintBottom_toBottomOf="@+id/btSalvarPlacar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btSalvarPlacar"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="#FAFAFA" />
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="64dp"
+        android:text="Time1"
+        android:textColor="#F4EB9D"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlacar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="alteraPlacar"
+        android:text="0"
+        android:textColor="#F4EB9D"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btVerJogos"
+        app:layout_constraintEnd_toEndOf="@+id/time1"
+        app:layout_constraintTop_toBottomOf="@+id/time1"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="104dp"
+        android:text="Time2"
+        android:textColor="#F4EB9D"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlacar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:onClick="alteraPlacar"
+        android:text="0 "
+        android:textColor="#F4EB9D"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btSalvarPlacar"
+        app:layout_constraintStart_toStartOf="@+id/time2"
+        app:layout_constraintTop_toBottomOf="@+id/time2"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <TextView
+        android:id="@+id/tvCrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="0:00:00"
+        android:textColor="#F4EB9D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btVerJogos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="415dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
